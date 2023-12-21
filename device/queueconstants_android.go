@@ -9,9 +9,9 @@ package device
 
 const (
 	QueueStagedSize            = 128
-	QueueOutboundSize          = 2048
-	QueueInboundSize           = 2048
-	QueueHandshakeSize         = 2048
+	QueueOutboundSize          = 4096
+	QueueInboundSize           = 4096
+	QueueHandshakeSize         = 4096
 	MaxSegmentSize             = 2200
 	PreallocatedBuffersPerPool = 4096
 )
