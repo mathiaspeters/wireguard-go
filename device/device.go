@@ -294,6 +294,10 @@ func NewDevice(tunDevice tun.Device, bind conn.Bind, logger *Logger) *Device {
 
 	// create queues
 
+	logger.Verbosef("Outbound buffer size ", QueueOutboundSize)
+	logger.Verbosef("Inbound buffer size ", QueueInboundSize)
+	logger.Verbosef("Handshake buffer size ", QueueHandshakeSize)
+
 	device.queue.handshake = newHandshakeQueue()
 	device.queue.encryption = newOutboundQueue()
 	device.queue.decryption = newInboundQueue()
